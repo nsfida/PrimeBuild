@@ -88,21 +88,43 @@ nav a:hover::after{
 
 /* HERO SECTION */
 .hero{
+    position:relative;
     height:100vh;
-    background:linear-gradient(rgba(13,27,42,0.7), rgba(13,27,42,0.7)),
-    url('home.png');
-    background-size:cover;
-    background-position:center;
     display:flex;
     justify-content:center;
     align-items:center;
     text-align:center;
     color:#fff;
     padding:20px;
+    overflow:hidden;
+}
+
+.hero video{
+    position:absolute;
+    top:0;
+    width:33.3333%;
+    height:100%;
+    object-fit:cover;
+    z-index:-1;
+    filter: brightness(0.5);
+}
+
+.hero video.left{
+    left:0;
+}
+
+.hero video.center{
+    left:33.3333%;
+}
+
+.hero video.right{
+    left:66.6666%;
 }
 
 .hero-content{
+    position:relative;
     animation:fadeIn 2s ease forwards;
+    z-index:1;
 }
 
 .hero h1{
@@ -206,6 +228,18 @@ footer{
 </header>
 
 <section class="hero">
+    <video autoplay muted loop class="left">
+        <source src="vid1.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+    <video autoplay muted loop class="center">
+        <source src="vid2.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+    <video autoplay muted loop class="right">
+        <source src="vid3.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
     <div class="hero-content">
         <h1>ADVANCE WATERPROOFING COATING & INSULATION SERVICES</h1>
         <p>Delivering high-performance construction chemicals and advanced waterproofing systems for long-lasting protection.</p>
