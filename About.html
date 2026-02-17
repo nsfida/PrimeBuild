@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Prime Build Construction Chemicals</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+    background:#f5f7fa;
+    color:#333;
+}
+
+/* HEADER */
+header{
+    position:fixed;
+    width:100%;
+    top:0;
+    left:0;
+    background:#0d1b2a;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:20px 60px;
+    z-index:1000;
+    box-shadow:0 4px 15px rgba(0,0,0,0.2);
+}
+
+.logo{
+    display:flex;
+    align-items:center;
+    gap:6px;
+    color:#fff;
+}
+
+.logo img{
+    height:50px;
+    width:auto;
+}
+
+.logo-text{
+    display:flex;
+    flex-direction:column;
+    line-height:1.2;
+    font-size:22px;
+    font-weight:700;
+}
+
+.logo-text .ar{
+    font-size:20px;
+    font-weight:700;
+    direction:rtl;
+}
+
+/* NAVIGATION */
+nav a{
+    color:#fff;
+    text-decoration:none;
+    margin-left:30px;
+    font-weight:500;
+    position:relative;
+    transition:0.3s;
+}
+
+nav a::after{
+    content:"";
+    position:absolute;
+    left:0;
+    bottom:-5px;
+    width:0%;
+    height:2px;
+    background:#00b4d8;
+    transition:0.3s;
+}
+
+nav a:hover::after{
+    width:100%;
+}
+
+/* HERO */
+.hero{
+    height:50vh;
+    background:linear-gradient(rgba(13,27,42,0.7), rgba(13,27,42,0.7)),
+    url('img.jpg');
+    background-size:cover;
+    background-position:center;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    color:#fff;
+    margin-top:90px;
+}
+
+.hero h1{
+    font-size:42px;
+    animation:fadeIn 1.5s ease forwards;
+}
+
+/* CONTENT */
+.section{
+    padding:80px 60px;
+    max-width:1000px;
+    margin:auto;
+}
+
+.section p{
+    font-size:16px;
+    line-height:1.8;
+    margin-bottom:20px;
+    text-align:justify;
+}
+
+.highlight{
+    font-weight:600;
+    color:#0d1b2a;
+}
+
+.location{
+    background:#e9f5fb;
+    padding:30px;
+    border-left:5px solid #00b4d8;
+    margin-top:40px;
+    border-radius:8px;
+}
+
+/* FOOTER */
+footer{
+    background:#0d1b2a;
+    color:#fff;
+    text-align:center;
+    padding:20px;
+}
+
+/* ANIMATION */
+@keyframes fadeIn{
+    from{
+        opacity:0;
+        transform:translateY(20px);
+    }
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
+/* RESPONSIVE */
+@media(max-width:768px){
+    header{
+        padding:15px 20px;
+    }
+    nav a{
+        margin-left:15px;
+        font-size:14px;
+    }
+    .section{
+        padding:60px 20px;
+    }
+    .hero h1{
+        font-size:32px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <div class="logo">
+        <img src="logo.png" alt="Prime Build Logo">
+        <div class="logo-text">
+            Prime Build Construction Chemicals
+            <div class="ar">برايم بيلد كونستركشن كيميكالز</div>
+        </div>
+    </div>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="About.html">About Us</a>
+        <a href="Who.html">Who We Are</a>
+        <a href="Services.html">Services</a>
+        <a href="faq.html">FAQ</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+</header>
+
+<section class="hero">
+    <div class="hero-content">
+        <h1>About Us</h1>
+    </div>
+</section>
+
+<section class="section">
+
+    <p>
+        <span class="highlight">PRIME BUILD CONSTRUCTION CHEMICALS</span> is an 
+        ISO 14001:2018, ISO 14001:2015 and ISO 9001:2015 certified company 
+        specialized in delivering high-end solutions for Waterproofing, 
+        Thermal Insulation, and Protective Coating systems.
+    </p>
+
+    <p>
+        Our advanced application systems are engineered for durability, 
+        rapid curing, and long-term structural protection even in the most 
+        demanding environments. We proudly serve industrial, commercial, 
+        and infrastructure projects, delivering precision-applied solutions 
+        that outperform traditional coating technologies.
+    </p>
+
+    <p>
+        We are specialized in all forms of Spray & Injected Foam Insulation 
+        with a fully trained and fully approved workforce. Our systems are 
+        designed for Walls, Floors, and Internal & External Roof applications 
+        in both commercial and domestic projects.
+    </p>
+
+    <p>
+        Our mission is to provide innovative, environmentally responsible, 
+        and cost-effective construction chemical solutions that extend 
+        structural life, reduce maintenance costs, and enhance building 
+        performance across the Kingdom of Saudi Arabia.
+    </p>
+
+    <div class="location">
+        <strong>Location:</strong><br>
+        Dammam City, Eastern Province<br>
+        Kingdom of Saudi Arabia
+    </div>
+
+</section>
+
+<footer>
+    © 2026 Prime Build Construction Chemicals. All Rights Reserved.
+</footer>
+
+<!-- SCROLL FUNCTIONALITY -->
+<script>
+let lastScrollTop = 0;
+let locked = false;
+
+window.addEventListener("scroll", function() {
+    if (locked) return;
+
+    const scrollTop = window.scrollY;
+    const windowHeight = window.innerHeight;
+    const documentHeight = document.documentElement.scrollHeight;
+
+    // Scroll down → Who We Are
+    if (scrollTop > lastScrollTop && (scrollTop + windowHeight >= documentHeight - 5)) {
+        locked = true;
+        setTimeout(function() {
+            window.location.href = "Who.html";
+        }, 300);
+    }
+
+    // Scroll up → Home
+    if (scrollTop < lastScrollTop && scrollTop <= 5) {
+        locked = true;
+        setTimeout(function() {
+            window.location.href = "index.html";
+        }, 300);
+    }
+
+    lastScrollTop = scrollTop <= 0 ? 0 : scrollTop;
+});
+</script>
+
+</body>
+</html>

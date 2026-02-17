@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Prime Build Construction Chemicals</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+    background:#f5f7fa;
+    color:#333;
+}
+
+/* HEADER */
+header{
+    position:fixed;
+    width:100%;
+    top:0;
+    left:0;
+    background:#0d1b2a;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:20px 60px;
+    z-index:1000;
+    box-shadow:0 4px 15px rgba(0,0,0,0.2);
+}
+
+.logo{
+    display:flex;
+    align-items:center;
+    gap:4px;
+    color:#fff;
+}
+
+.logo img{
+    height:50px;
+    width:auto;
+}
+
+.logo-text{
+    display:flex;
+    flex-direction:column;
+    line-height:1.2;
+    font-size:22px;
+    font-weight:700;
+}
+
+.logo-text .ar{
+    font-size:20px;
+    font-weight:700;
+    direction:rtl;
+}
+
+/* NAVIGATION */
+nav a{
+    color:#fff;
+    text-decoration:none;
+    margin-left:30px;
+    font-weight:500;
+    position:relative;
+    transition:0.3s;
+}
+
+nav a::after{
+    content:"";
+    position:absolute;
+    left:0;
+    bottom:-5px;
+    width:0%;
+    height:2px;
+    background:#00b4d8;
+    transition:0.3s;
+}
+
+nav a:hover::after{
+    width:100%;
+}
+
+/* HERO SECTION */
+.hero{
+    height:100vh;
+    background:linear-gradient(rgba(13,27,42,0.7), rgba(13,27,42,0.7)),
+    url('home.png');
+    background-size:cover;
+    background-position:center;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    color:#fff;
+    padding:20px;
+}
+
+.hero-content{
+    animation:fadeIn 2s ease forwards;
+}
+
+.hero h1{
+    font-size:48px;
+    margin-bottom:20px;
+}
+
+.hero p{
+    font-size:18px;
+    margin-bottom:30px;
+}
+
+.btn{
+    display:inline-block;
+    padding:12px 30px;
+    background:#00b4d8;
+    color:#fff;
+    border-radius:30px;
+    text-decoration:none;
+    transition:0.3s;
+}
+
+.btn:hover{
+    background:#0077b6;
+    transform:translateY(-3px);
+}
+
+/* SECTION */
+.section{
+    padding:100px 60px;
+    text-align:center;
+}
+
+.section h2{
+    font-size:32px;
+    margin-bottom:20px;
+    color:#0d1b2a;
+}
+
+.section p{
+    max-width:700px;
+    margin:auto;
+    font-size:16px;
+    line-height:1.6;
+}
+
+/* FOOTER */
+footer{
+    background:#0d1b2a;
+    color:#fff;
+    text-align:center;
+    padding:20px;
+}
+
+/* ANIMATIONS */
+@keyframes fadeIn{
+    from{
+        opacity:0;
+        transform:translateY(20px);
+    }
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
+/* RESPONSIVE */
+@media(max-width:768px){
+    header{
+        padding:15px 20px;
+    }
+    nav a{
+        margin-left:15px;
+        font-size:14px;
+    }
+    .hero h1{
+        font-size:32px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <div class="logo">
+        <img src="logo.png" alt="Prime Build Logo">
+        <div class="logo-text">
+            Prime Build Construction Chemicals
+            <div class="ar">برايم بيلد كونستركشن كيميكالز</div>
+        </div>
+    </div>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="About.html">About Us</a>
+        <a href="Who.html">Who We Are</a>
+        <a href="Services.html">Services</a>
+        <a href="faq.html">FAQ</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+</header>
+
+<section class="hero">
+    <div class="hero-content">
+        <h1>ADVANCE WATERPROOFING COATING & INSULATION SERVICES</h1>
+        <p>Delivering high-performance construction chemicals and advanced waterproofing systems for long-lasting protection.</p>
+        <a href="About.html" class="btn">Learn More</a>
+    </div>
+</section>
+
+<section class="section">
+    <h2>Reliable Protection for Every Structure</h2>
+    <p>
+        Prime Build Construction Chemicals specializes in advanced waterproofing systems,
+        protective coatings, and construction chemical solutions designed to enhance
+        durability and structural integrity.
+    </p>
+</section>
+
+<footer>
+    © 2026 Prime Build Construction Chemicals. All Rights Reserved.
+</footer>
+
+<script>
+/* AUTO MOVE TO "ABOUT US" PAGE WHEN SCROLL REACHES BOTTOM */
+let redirected = false;
+
+window.addEventListener("scroll", function() {
+
+    if (redirected) return;
+
+    const scrollTop = window.scrollY;
+    const windowHeight = window.innerHeight;
+    const documentHeight = document.documentElement.scrollHeight;
+
+    if (scrollTop + windowHeight >= documentHeight - 5) {
+        redirected = true;
+
+        setTimeout(function(){
+            window.location.href = "About.html";
+        }, 300);
+    }
+});
+</script>
+
+</body>
+</html>

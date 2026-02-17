@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Prime Build Construction Chemicals</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+    background:#f5f7fa;
+    color:#333;
+}
+
+/* HEADER */
+header{
+    position:fixed;
+    width:100%;
+    top:0;
+    left:0;
+    background:#0d1b2a;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:20px 60px;
+    z-index:1000;
+    box-shadow:0 4px 15px rgba(0,0,0,0.2);
+}
+
+.logo{
+    display:flex;
+    align-items:center;
+    gap:6px;
+    color:#fff;
+}
+
+.logo img{
+    height:50px;
+    width:auto;
+}
+
+.logo-text{
+    display:flex;
+    flex-direction:column;
+    line-height:1.2;
+    font-size:22px;
+    font-weight:700;
+}
+
+.logo-text .ar{
+    font-size:20px;
+    font-weight:700;
+    direction:rtl;
+}
+
+/* NAVIGATION */
+nav a{
+    color:#fff;
+    text-decoration:none;
+    margin-left:30px;
+    font-weight:500;
+    position:relative;
+    transition:0.3s;
+}
+
+nav a::after{
+    content:"";
+    position:absolute;
+    left:0;
+    bottom:-5px;
+    width:0%;
+    height:2px;
+    background:#00b4d8;
+    transition:0.3s;
+}
+
+nav a:hover::after{
+    width:100%;
+}
+
+/* HERO */
+.hero{
+    height:50vh;
+    background:linear-gradient(rgba(13,27,42,0.75), rgba(13,27,42,0.75)),
+    url('https://images.unsplash.com/photo-1592928305232-1d3d9ef22cb0?auto=format&fit=crop&w=1600&q=80');
+    background-size:cover;
+    background-position:center;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    color:#fff;
+    margin-top:90px;
+}
+
+.hero h1{
+    font-size:42px;
+    animation:fadeIn 1.5s ease forwards;
+}
+
+/* SECTION */
+.section{
+    padding:80px 60px;
+    max-width:900px;
+    margin:auto;
+}
+
+.section h2{
+    font-size:32px;
+    margin-bottom:40px;
+    text-align:center;
+    color:#0d1b2a;
+}
+
+/* FAQ Accordion */
+.accordion-item{
+    background:#fff;
+    border-radius:10px;
+    margin-bottom:15px;
+    box-shadow:0 5px 15px rgba(0,0,0,0.1);
+    overflow:hidden;
+    transition:0.3s;
+}
+
+.accordion-header{
+    padding:20px;
+    cursor:pointer;
+    font-weight:600;
+    position:relative;
+    font-size:18px;
+    background:#e0f0ff;
+    transition:0.3s;
+}
+
+.accordion-header::after{
+    content:'\002B';
+    font-size:24px;
+    position:absolute;
+    right:20px;
+    transition:0.3s;
+}
+
+.accordion-header.active::after{
+    content:'\2212';
+}
+
+.accordion-content{
+    max-height:0;
+    overflow:hidden;
+    padding:0 20px;
+    transition:max-height 0.3s ease;
+    font-size:16px;
+    line-height:1.8;
+    background:#f9f9f9;
+}
+
+.accordion-content p{
+    padding:15px 0;
+}
+
+/* FOOTER */
+footer{
+    background:#0d1b2a;
+    color:#fff;
+    text-align:center;
+    padding:20px;
+}
+
+/* ANIMATION */
+@keyframes fadeIn{
+    from{
+        opacity:0;
+        transform:translateY(20px);
+    }
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
+/* RESPONSIVE */
+@media(max-width:768px){
+    header{
+        padding:15px 20px;
+    }
+    nav a{
+        margin-left:15px;
+        font-size:14px;
+    }
+    .hero h1{
+        font-size:32px;
+    }
+    .section{
+        padding:60px 20px;
+    }
+    .accordion-header{
+        font-size:16px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <div class="logo">
+        <img src="logo.png" alt="Prime Build Logo">
+        <div class="logo-text">
+            Prime Build Construction Chemicals
+            <div class="ar">برايم بيلد كونستركشن كيميكالز</div>
+        </div>
+    </div>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="About.html">About Us</a>
+        <a href="Who.html">Who We Are</a>
+        <a href="Services.html">Services</a>
+        <a href="faq.html">FAQ</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+</header>
+
+<section class="hero">
+    <h1>Frequently Asked Questions</h1>
+</section>
+
+<section class="section">
+    <h2>Have Questions? We Have Answers!</h2>
+
+    <div class="accordion-item">
+        <div class="accordion-header">What services does Prime Build provide?</div>
+        <div class="accordion-content">
+            <p>We specialize in Waterproofing, Thermal Insulation, and Protective Coating solutions for industrial, commercial, and residential projects.</p>
+        </div>
+    </div>
+
+    <div class="accordion-item">
+        <div class="accordion-header">Are your products ISO certified?</div>
+        <div class="accordion-content">
+            <p>Yes, all our products and application systems comply with ISO 14001:2018, ISO 14001:2015, and ISO 9001:2015 standards.</p>
+        </div>
+    </div>
+
+    <div class="accordion-item">
+        <div class="accordion-header">Do you offer on-site application?</div>
+        <div class="accordion-content">
+            <p>Absolutely! Our fully trained and certified workforce provides on-site application for all systems including Spray & Injected Foam Insulation, Waterproofing, and Protective Coatings.</p>
+        </div>
+    </div>
+
+    <div class="accordion-item">
+        <div class="accordion-header">Can you handle both commercial and residential projects?</div>
+        <div class="accordion-content">
+            <p>Yes, we handle projects of any scale including commercial, industrial, and residential buildings, offering solutions tailored to specific requirements.</p>
+        </div>
+    </div>
+
+    <div class="accordion-item">
+        <div class="accordion-header">Where are you located?</div>
+        <div class="accordion-content">
+            <p>We are based in Dammam City, Kingdom of Saudi Arabia, serving clients across the region.</p>
+        </div>
+    </div>
+
+    <div class="accordion-item">
+        <div class="accordion-header">How can I get a quote?</div>
+        <div class="accordion-content">
+            <p>You can contact us via the Contact page or email us directly. We provide personalized quotes based on project scope and requirements.</p>
+        </div>
+    </div>
+
+</section>
+
+<footer>
+    © 2026 Prime Build Construction Chemicals. All Rights Reserved.
+</footer>
+
+<script>
+// Accordion functionality
+const headers = document.querySelectorAll('.accordion-header');
+
+headers.forEach(header => {
+    header.addEventListener('click', () => {
+        header.classList.toggle('active');
+        const content = header.nextElementSibling;
+        if(header.classList.contains('active')){
+            content.style.maxHeight = content.scrollHeight + "px";
+        } else {
+            content.style.maxHeight = 0;
+        }
+    });
+});
+
+// Scroll functionality
+let lastScrollTop = 0;
+let locked = false;
+
+window.addEventListener("scroll", function() {
+
+    if (locked) return;
+
+    let currentScroll = window.pageYOffset || document.documentElement.scrollTop;
+    let windowHeight = window.innerHeight;
+    let docHeight = document.documentElement.scrollHeight;
+
+    // Scroll down → Contact
+    if (currentScroll > lastScrollTop && (currentScroll + windowHeight >= docHeight - 2)) {
+        locked = true;
+        setTimeout(function() {
+            window.location.href = "contact.html";
+        }, 300);
+    }
+
+    // Scroll up → Services
+    if (currentScroll < lastScrollTop && currentScroll <= 2) {
+        locked = true;
+        setTimeout(function() {
+            window.location.href = "Services.html";
+        }, 300);
+    }
+
+    lastScrollTop = currentScroll <= 0 ? 0 : currentScroll;
+});
+</script>
+
+</body>
+</html>
